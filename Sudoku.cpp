@@ -59,21 +59,21 @@ bool solveSudoku(int grid[N][N], int row, int col)
 
 int main()
 {
-  int grid[N][N] = { { 3, 0, 6, 5, 0, 8, 4, 0, 0 },
-          { 5, 2, 0, 0, 0, 0, 0, 0, 0 },
-          { 0, 8, 7, 0, 0, 0, 0, 3, 1 },
-          { 0, 0, 3, 0, 1, 0, 0, 8, 0 },
-          { 9, 0, 0, 8, 6, 3, 0, 0, 5 },
-          { 0, 5, 0, 0, 9, 0, 6, 0, 0 },
-          { 1, 3, 0, 0, 0, 0, 2, 5, 0 },
-          { 0, 0, 0, 0, 0, 0, 0, 7, 4 },
-          { 0, 0, 5, 2, 0, 6, 3, 0, 0 } };
-
-  if (solveSudoku(grid, 0, 0))
-    print(grid);
-  else
-    cout << "no solution exists " << endl;
-
-  return 0;
+    int grid[N][N];
+    for(int i=0;i<N;i++){
+        cout<<"Enter row "<<i+1<<" of your sudoku(Enter '0' if the number is not present in the grid):\n";
+        int k=0;
+        for(int j=0;j<N;j++){
+            cin>>grid[i][j];
+        }
+        cout<<"Did you want to reenter this row?(type 'y' for yes and 'n' for no)";
+        char reenter;
+        if(reenter=='y'){
+            i--;
+        }
+    }
+    if (solveSudoku(grid, 0, 0)) print(grid);
+    else cout << "no solution exists " << endl;
+    return 0;
 }
 
