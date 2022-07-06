@@ -67,7 +67,7 @@ int main()
             cin>>grid[i][j];
             if((grid[i][j]>9) || (grid[i][j]<0)){
                 cout<<"Invalid Input!!\n";
-                cout<<"Reenter for "<<i+1<<"th row and "<<j+1<<"th column: ";
+                cout<<"Reenter for row "<<i+1<<" and column "<<j+1;
                 cin>>grid[i][j];
             }
         }
